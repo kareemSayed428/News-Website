@@ -1,0 +1,145 @@
+
+.next-btn i {
+    opacity: 70%;
+}
+.next-btn i:hover {
+    opacity: 100%;
+}
+.Technology-News .main-post .card .card-body .card-title:hover {
+    color: #dc4c64;
+    cursor: pointer;
+}
+.ad-space h2 {
+    transform: translate(-50px, -50px);
+}
+/* Start Technology */
+.Technology-title-section {
+    margin-left: 120px;
+}
+.Technology-title-section h6 {
+    height: 2px;
+    top: 95%;
+    text-align: center;
+    padding: 10px 5px 30px;
+}
+.Technology-title-section h6 span {
+    height: 2px;
+    width: 600px;
+    top: 95%;
+}
+.Technology-title-section a {
+    cursor: pointer;
+    color: #767676;
+    text-decoration: underline;
+    margin-left: 49%;
+    position: absolute;
+}
+.Technology-title-section a:hover {
+    text-decoration: none;
+}
+.Technology-News .tech-section {
+    display: flex;
+}
+.Technology-News .tech-section .main-post .card {
+    width: 400px;
+}
+.Technology-News .tech-section .main-post .card .bg-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.Technology-News .tech-section .main-post .card .card-body {
+    height: 400px;
+}
+.Technology-News .tech-section .main-post .card .card-body .btn {
+    top: 80%;
+    z-index: 2;
+}
+.Technology-News .tech-section .main-post .card .card-body .next-btn {
+    top: 80%;
+    margin-left: 1.5rem;
+}
+.Technology-News .small-post .card {
+    width: 250px;
+    margin-left: 5rem;
+    display: block;
+}
+.Technology-News .small-post .card .bg-image img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+/* End Technology */
+
+
+
+/* 
+    Start Media
+      -code down
+*/
+@media (max-width: 992px) {  
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .Technology-title-section h6 span {
+        width: 500px;
+    }
+    .Technology-title-section a {
+        transform: translateX(250px);
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .Technology-title-section{
+        margin-left: 17px;
+    }
+    .Technology-title-section h6 {
+        width: 200px;
+    }
+    .Technology-title-section h6 span {
+        width: 250px;
+    }
+    .Technology-title-section a {
+        transform: translateX(160px);
+    }
+    .Technology-News .tech-section {
+        display: block;
+    }
+    .Technology-News .tech-section .main-post .card {
+        width: 430px;
+        margin: 0 auto;
+    }
+    .Technology-News .tech-section .main-post .card .bg-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .Technology-News .tech-section .main-post .card .card-body {
+        height: 360px;
+    }
+    .Technology-News .tech-section .main-post .card .card-body .btn {
+        top: 75%;
+    }
+    .Technology-News .tech-section .main-post .card .card-body .next-btn {
+        top: 75%;
+    }
+    .Technology-News .small-post {
+        display: flex;
+        margin-left: 5px;
+    }
+    .Technology-News .small-post .card {
+        width: 200px;
+        margin: 20px auto;
+    }
+    .Technology-News .small-post .card .bg-image img {
+        height: 150px;
+        object-fit: contain;
+        width: 280px;
+    }
+}

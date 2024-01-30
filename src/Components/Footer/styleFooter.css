@@ -1,0 +1,9 @@
+/* 
+    Start Media
+      -code down
+*/
+@media (max-width: 576px) {  
+    .footer {
+        width: 220%;
+    }
+}

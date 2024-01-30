@@ -1,0 +1,79 @@
+/* Start Entertainmen */
+.head-home .first-img {
+    position: relative;
+    cursor: pointer;
+}
+.head-home .first-img img {
+    z-index: -1;
+    transition: 0.3s;
+}
+.head-home .first-img img:hover {
+    background-color: white;
+    opacity: 80%;
+    
+    transition: 0.3s;
+}
+
+.head-home .first-img h3 {
+    color: white;
+    position: absolute;
+    padding: 10px;
+    z-index: 2;
+}
+/* End Entertainmen */
+
+
+
+
+
+/* Start Sports */
+.head-home .secound-img {
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.head-home .secound-img img {
+    z-index: -1;
+    transition: 0.3s;
+}
+.head-home .secound-img img:hover {
+    background-color: white;
+    opacity: 80%;
+    transition: 0.3s;
+}
+
+.head-home .secound-img h3 {
+    color: white;
+    position: absolute;
+    padding: 10px;
+    z-index: 2;
+}
+
+.head-home .secound-img .third_img {
+    margin-top: 10px;
+}
+.head-home .secound-img .third_img > a img {
+    margin-right: 10px;
+}
+/* End Sports */
+
+
+
+
+
+
+@media (max-width: 576px) {
+    .head-home {
+        margin-left: 335px;
+    }
+    .head-home .first-img {
+        display: none;
+    }
+    .head-home .secound-img > a img{
+       width: 710px;
+    }
+    .head-home img{
+        width: 350px;
+        
+    }
+}

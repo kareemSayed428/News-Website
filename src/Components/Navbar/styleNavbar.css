@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+
+.logo {
+    background-image: url(./image/new.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 600px;
+    padding: 100px;
+    
+    background-position-y: 20px;
+    background-position-x: 50%;
+
+}
+.tow {
+    background-color: #332d2d;
+    width: 100%;
+    height: 75px;
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    
+}
+.tow .my-link {
+    display: flex;
+    padding: 20px;
+    margin-left: 50px;
+}
+.tow .my-link > a {
+    background-color: #dc4c64;
+    color: white;
+    height: 38px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.tow .my-link .links ul{
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+}
+.tow .my-link .links ul li {
+    margin-left: 40px;
+}
+.tow .my-link .links ul li a {
+    color: rgb(206, 204, 204);
+}
+.tow .toggle-menu i{
+    color: #dc4c64;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 7px;
+    margin-right: 50px;
+}
+.tow .toggle-menu .secound-link {
+    position: relative;
+}
+.tow .toggle-menu .secound-link ul {
+    position: absolute;
+    left: -790px;
+}
+.tow .toggle-menu .secound-link ul li {
+    margin-bottom: 10px;
+    
+}
+.tow .toggle-menu .secound-link ul li a {
+    color: rgb(206, 204, 204)
+}
+
+
+
+/* Start Media */
+@media (min-width: 992px) {
+    .tow .toggle-menu {
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    .tow .my-link .links {
+        display: none;
+    }
+    .tow .toggle-menu .secound-link ul {
+        left: -700px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .tow .toggle-menu .secound-link ul {
+        left: -550px;
+    }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .tow .my-link {
+        margin-left: 10px;
+    }
+    .tow .my-link .links {
+        display: none;
+    }
+    .tow .toggle-menu i{
+        margin-right: 50px;
+    }
+    .tow .toggle-menu .secound-link ul {
+        left: -700px;
+    }
+}
