@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './styleTrendingNews.css';
+import { trendingData } from "../../TrendingData";
 
 function TrendingNow() {
     // trendingNews
@@ -9,7 +10,7 @@ function TrendingNow() {
     const [firstNumTrend, setFirstNumTrend] = useState(0);
     const [secoundNumTrend, setsecoundtNumTrend] = useState(1);
 
-    const urlTrendingNews = 'https://newsapi.org/v2/top-headlines?country=eg&category=sport&apiKey=d2b27050f51b434b80dec292733e13b9'
+    const urlTrendingNews = 'https://newsapi.org/v2/top-headlines?country=eg&category=sport&apiKey=d2b27050f51b434b80dec292733e13b9';
     
 
     useEffect(()=>{
@@ -30,7 +31,7 @@ function TrendingNow() {
                 </div>
 
                 {
-                    trendNews.map((e)=>{
+                    trendingData.map((e)=>{
                         return(
                             <div className='trend-scroll d-flex justify-content-center align-items-center' key={Math.random()} style={{width: 'auto'}}>
                                 

@@ -14,6 +14,9 @@ import TrendingNow from './Trending Now/TrendingNow';
 import HealthSection from './Health Seaction/HealthSection';
 import BusinessSection from './Business Section/BusinessSection';
 import LatestNews from './Latest News/LatestNews';
+import { techData } from '../TechData';
+import { latestNewsData } from '../LatestNewsData';
+// import techData from './../TechData';
 initMDB({ Ripple });
 
 
@@ -58,34 +61,34 @@ function Home() {
     const mainDiv = useRef();
    
 
-//     useEffect(()=>{
+    useEffect(()=>{
 
-//         const slidShowNews = setInterval(() => {
+        const slidShowNews = setInterval(() => {
                 
-//                 mainDiv.current.scrollLeft += 100;
-//                 mainDiv.current.style.scrollBehavior = 'smooth';
-//                 //console.log(mainDiv.current.scrollLeft);
+                mainDiv.current.scrollLeft += 100;
+                mainDiv.current.style.scrollBehavior = 'smooth';
+                //console.log(mainDiv.current.scrollLeft);
                 
     
-//                 if(mainDiv.current.scrollLeft >= 5100) {
-//                     mainDiv.current.scrollLeft = 0;   // scrollLeft is change (in the first scrollLeft = 0 and the end scrollLeft = 400 so reset it to 0)
+                if(mainDiv.current.scrollLeft >= 5100) {
+                    mainDiv.current.scrollLeft = 0;   // scrollLeft is change (in the first scrollLeft = 0 and the end scrollLeft = 400 so reset it to 0)
                     
-//                 }
+                }
     
-//                 console.log('work');
+                //console.log('work');
     
-//             }, 2000);
+            }, 2000);
         
 
-//         //slidShowNews();
+        //slidShowNews();
 
-//         //To CleanUp - when move to another page the slidShowNews will stop
-//         return ()=> {
-//             clearInterval(slidShowNews);
-//         };
+        //To CleanUp - when move to another page the slidShowNews will stop
+        return ()=> {
+            clearInterval(slidShowNews);
+        };
         
 
-//   }, [])
+  }, [])
     
 
 
@@ -148,6 +151,7 @@ function Home() {
 
             {/* Start Tecnology Section */}
             <div className='Technology-title-section container mt-5'>
+                
                 <div className='d-flex'>
                     <h6 className='bg-danger text-white position-relative'>Technology News <span className='bg-danger position-absolute'></span></h6>
                     <Link to='TechnologyPage' className='mt-2'>See..All</Link>
@@ -160,7 +164,7 @@ function Home() {
                             <div className='tech-section'>
                                     <div className='main-post'>
                                     {
-                                        showData.map((e)=>{
+                                        techData.map((e)=>{
                                             return(
                                                 
                                                 <div className="card mb-3" key={Math.random()}>
@@ -217,7 +221,7 @@ function Home() {
 
                                     <div className='small-post'>
                                     {
-                                        showData.map((e)=>{
+                                        techData.map((e)=>{
                                             return(
                                                 
                                             <div className="card mb-3" key={Math.random()}>
@@ -248,7 +252,7 @@ function Home() {
 
                             {/* Start Business Section */}
                             
-                                {/* <BusinessSection></BusinessSection> */}
+                                <BusinessSection></BusinessSection>
 
                             {/* End Business Section */}
 
@@ -257,7 +261,7 @@ function Home() {
 
                             {/* Start Health Section */}
 
-                            {/* <HealthSection></HealthSection> */}
+                            <HealthSection></HealthSection>
 
                             {/* End Health Section */}
 
@@ -267,7 +271,7 @@ function Home() {
 
                             {/* Start Sport Section */}
 
-                            {/* <SportSection></SportSection> */}
+                            <SportSection></SportSection>
 
                             {/* Start Sport Section */}
 
@@ -279,17 +283,17 @@ function Home() {
 
                             {/* Start Entertainment Section */}
 
-                            {/* <EntertainmentSection></EntertainmentSection> */}
+                            <EntertainmentSection></EntertainmentSection>
 
                             {/* End Entertainment Section */}
 
 
 
                             {/* Start ad Section */}
-                            {/* <div className='ad-space ms-3' style={{marginTop: '35px', position: 'relative'}}>
+                            <div className='ad-space ms-3' style={{marginTop: '35px', position: 'relative'}}>
                                 <h2 style={{position: 'absolute', left: '50%', top: '50%', marginTop: '35px'}}>Ad Space</h2>
                                 <img src={ad_img}></img>
-                            </div> */}
+                            </div>
                             {/* End ad Section */}
 
                             
@@ -298,7 +302,7 @@ function Home() {
 
                     {/* Start latest-news */}
 
-                    {/* <LatestNews></LatestNews> */}
+                    <LatestNews></LatestNews>
 
                     {/* End latest-news */}
 
@@ -316,11 +320,11 @@ function Home() {
                         
                         {/* Start SlidShow */}
 
-                {/* <div className='test-slid mt-5'>
+                <div className='test-slid mt-5'>
                     <div ref={mainDiv} className='my-card' style={{width: '1000px', overflowX: 'scroll', display: 'flex', margin: 'auto'}}>
                     
                         {
-                            general.map((e)=>{
+                            latestNewsData.map((e)=>{
                                 return(
                                     <div className='my-img' key={Math.random()}>
                                         <div>
@@ -338,7 +342,7 @@ function Home() {
                         }
 
                      </div>
-                </div> */}
+                </div>
 
 
                         {/* End SlidShow */}

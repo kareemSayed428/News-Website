@@ -5,6 +5,8 @@ import newspaper_img from './../3- Home/image/newspaper.jpg';
 import { Ripple, initMDB } from "mdb-ui-kit";
 import { Link } from 'react-router-dom';
 import ReadMore from '../4- Read More/ReadMore';
+import { sportData } from '../SportData';
+import { latestNewsData } from '../LatestNewsData';
 initMDB({ Ripple });
 
 function SportPage() {
@@ -64,7 +66,7 @@ function SportPage() {
                     <div className='left-post'>
                         
                         {
-                            showTecPost.map((e)=>{
+                            sportData.map((e)=>{
                                 return(
                                     <div className="card mb-3" key={Math.random()}>
                                             <div className="row g-0">
@@ -123,7 +125,7 @@ function SportPage() {
                                                 
                                                     
                                         {
-                                            latestNews.map((e)=>{
+                                            latestNewsData.map((e)=>{
                                                 return(
                                                     <div className="card mb-3" key={Math.random()} style={{width: '21rem'}}>
                                                         <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
@@ -142,7 +144,7 @@ function SportPage() {
                                                         </div>
                                                     </div>
                                                 );
-                                            })
+                                            }).slice(0, 13)
                                             
                                         }         
                                                     
@@ -156,7 +158,7 @@ function SportPage() {
                 </section>
 
 
-                <section ref={loadMoreBtn} className='load-more text-center mt-3'>
+                {/* <section ref={loadMoreBtn} className='load-more text-center mt-3'>
                     <a onClick={()=>{
 
                         setPageSize(40);
@@ -165,7 +167,7 @@ function SportPage() {
                         
 
                     }} className="btn btn-danger" data-mdb-ripple-init>Load More</a>                            
-                </section>
+                </section> */}
             </div>
         </>
     )

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import newspaper_img from '../image/newspaper.jpg';
 import { Link } from "react-router-dom";
+import { sportData } from "../../SportData";
 
 function SportSection() {
     /* 
@@ -31,7 +32,7 @@ function SportSection() {
                                     
                                     <div className='main-post'>
                                     {
-                                        showSport.map((e)=>{
+                                        sportData.map((e)=>{
                                             return(
                                                 
                                                 <div className="card ms-3 mb-3" style={{width: '400px'}} key={Math.random()}>
@@ -88,7 +89,7 @@ function SportSection() {
 
                                     <div className='small-post'>
                                     {
-                                        showSport.map((e)=>{
+                                        sportData.map((e)=>{
                                             return(
                                                 
                                             <div className="card mb-3" style={{width: '250px', marginLeft: '5rem', display: 'block'}} key={Math.random()}>

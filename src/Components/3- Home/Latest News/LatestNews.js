@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import newspaper_img from '../image/newspaper.jpg';
 import { Link } from "react-router-dom";
+import { latestNewsData } from "../../LatestNewsData";
 
 function LatestNews() {
     /*
@@ -36,7 +37,7 @@ function LatestNews() {
                                 
                                     <div className='d-flex flex-wrap'>
                                         {
-                                            general.map((e)=>{
+                                            latestNewsData.map((e)=>{
                                                 return(
                                                     <div className="card mb-3" style={{width: '21rem'}} key={Math.random()}>
                                                     <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">

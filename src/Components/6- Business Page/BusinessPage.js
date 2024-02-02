@@ -5,6 +5,8 @@ import Business_img from './image/Business.png';
 import { Ripple, initMDB } from "mdb-ui-kit";
 import { Link } from 'react-router-dom';
 import ReadMore from '../4- Read More/ReadMore';
+import { businessData } from '../BusinessData';
+import { latestNewsData } from '../LatestNewsData';
 initMDB({ Ripple });
 
 function BusinessPage() {
@@ -64,7 +66,7 @@ function BusinessPage() {
                     <div className='left-post'>
                         
                         {
-                            showTecPost.map((e)=>{
+                            businessData.map((e)=>{
                                 return(
                                     <div className="card mb-3" key={Math.random()}>
                                             <div className="row g-0">
@@ -123,7 +125,7 @@ function BusinessPage() {
                                                 
                                                     
                                         {
-                                            latestNews.map((e)=>{
+                                            latestNewsData.map((e)=>{
                                                 return(
                                                     <div className="card mb-3" key={Math.random()} style={{width: '21rem'}}>
                                                         <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
@@ -142,7 +144,7 @@ function BusinessPage() {
                                                         </div>
                                                     </div>
                                                 );
-                                            })
+                                            }).slice(0, 13)
                                             
                                         }         
                                                     
@@ -156,7 +158,7 @@ function BusinessPage() {
                 </section>
 
 
-                <section ref={loadMoreBtn} className='load-more text-center mt-3'>
+                {/* <section ref={loadMoreBtn} className='load-more text-center mt-3'>
                     <a onClick={()=>{
 
                         setPageSize(40);
@@ -165,7 +167,7 @@ function BusinessPage() {
                         
 
                     }} className="btn btn-danger" data-mdb-ripple-init>Load More</a>                            
-                </section>
+                </section> */}
             </div>
         </>
     )
