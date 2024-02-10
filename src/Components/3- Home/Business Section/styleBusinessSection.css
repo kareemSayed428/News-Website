@@ -5,6 +5,9 @@
 .next-btn i:hover {
     opacity: 100%;
 }
+.business-section{
+    display: flex;
+}
 business-section .main-post .card .card-body .card-title:hover {
     color: #dc4c64;
     cursor: pointer;
@@ -113,7 +116,7 @@ business-section .small-post .card .bg-image img {
     }
     business-section .tech-section .main-post .card {
         width: 430px;
-        margin: 0 auto;
+        margin: 0 15px;
     }
     business-section .tech-section .main-post .card .bg-image img {
         width: 100%;
@@ -131,11 +134,11 @@ business-section .small-post .card .bg-image img {
     }
     business-section .small-post {
         display: flex;
-        margin-left: 5px;
+        margin-left: 30px;
     }
     business-section .small-post .card {
         width: 200px;
-        margin: 20px auto;
+        margin: 20px 5px;
     }
     business-section .small-post .card .bg-image img {
         height: 150px;

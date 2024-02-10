@@ -30,7 +30,7 @@ function BusinessSection() {
                                             <Link to='BusinessPage' className='mt-1' style={{marginLeft: '550px'}}>See All</Link>
                                         </div>
                             </div>
-                            <div className='business-section d-flex'>
+                            <div className='business-section'>
                                     
                                     <div className='main-post'>
                                     {
@@ -94,7 +94,7 @@ function BusinessSection() {
                                         businessData.map((e)=>{
                                             return(
                                                 
-                                            <div className="card mb-3" style={{width: '250px', marginLeft: '5rem', display: 'block'}} key={Math.random()}>
+                                            <div className="card mb-3" key={Math.random()}>
                                                 <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
                                                     <img src={e.urlToImage ? e.urlToImage : newspaper_img} className="img-fluid" style={{height: '100px', width: '100%', objectFit: 'cover'}}/>
                                                     <a href={e.url} target='_blank'>

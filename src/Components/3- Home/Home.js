@@ -17,6 +17,7 @@ import LatestNews from './Latest News/LatestNews';
 import { techData } from '../TechData';
 import { latestNewsData } from '../LatestNewsData';
 // import techData from './../TechData';
+import intro_img from './image/intro.png';
 initMDB({ Ripple });
 
 
@@ -119,6 +120,10 @@ function Home() {
 
     
 
+        /*
+            intro image
+        */
+       const [showIntro, setShowIntro] = useState(true);
 
 
     
@@ -145,6 +150,15 @@ function Home() {
 
     return(
         <>
+            <div className='intro-image' style={showIntro === false ? {display:'none'} : null}>
+                <div className='text'>
+                    <h3>We recommend viewing it on a large screen - it is not complete on small screens like mobile phones.<i onClick={()=>{setShowIntro(false)}} className="fa-solid fa-rectangle-xmark"></i></h3>
+                </div>
+                <img src={intro_img}></img>
+                
+                    <span></span>
+            </div>
+
              <HeadHome></HeadHome>
 
              <TrendingNow></TrendingNow>
